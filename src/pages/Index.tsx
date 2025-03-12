@@ -57,7 +57,7 @@ const Index = () => {
       </div>
       
       {/* Restaurant Info Card */}
-      <div className="bg-white/80 backdrop-blur-sm py-6 border-b border-gray-200">
+      <div className="bg-white/70 backdrop-blur-sm py-6 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <RestaurantInfo />
         </div>
@@ -65,7 +65,7 @@ const Index = () => {
       
       {/* Specialty Section */}
       <section className="container mx-auto py-16 px-4">
-        <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 mb-12 shadow-sm">
+        <div className="bg-white/70 backdrop-blur-sm rounded-lg p-8 mb-12 shadow-sm">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-2 font-playfair">Specialising in Asian Cuisine</h2>
             <p className="text-xl italic text-ocean-700 mt-2">"Grilled & Sizzling Style"</p>
@@ -104,7 +104,7 @@ const Index = () => {
         </div>
         
         {/* Location Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm mb-12">
+        <div className="bg-white/70 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm mb-12">
           <h2 className="text-3xl font-bold py-6 text-center font-playfair">Kaena Restaurant & Bar location</h2>
           <Map />
           <div className="p-6">
@@ -116,7 +116,7 @@ const Index = () => {
         </div>
         
         {/* Contact Us Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm">
+        <div className="bg-white/70 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm">
           <h2 className="text-3xl font-bold py-6 text-center font-playfair">Contact Us</h2>
           
           <div className="p-6">
