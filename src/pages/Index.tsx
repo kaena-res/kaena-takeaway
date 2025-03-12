@@ -10,7 +10,7 @@ import AmenityItem from '../components/AmenityItem';
 const slides = [
   {
     id: 1,
-    image: 'public/lovable-uploads/40ce9cda-70cf-43b8-95de-24d0f591a828.png',
+    image: 'public/lovable-uploads/32878c48-fb79-4dc6-afcb-9ea9312e9f3c.png',
     title: 'Kaena Restaurant & Bar',
     subtitle: 'Experience the flavors of Rarotonga in a beautiful beachside setting',
   },

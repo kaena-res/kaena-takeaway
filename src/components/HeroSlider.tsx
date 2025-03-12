@@ -86,7 +86,7 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
 
   return (
     <div 
-      className="relative w-full h-[100vh] overflow-hidden"
+      className="relative w-full h-[85vh] overflow-hidden"
       onMouseEnter={pauseAutoPlay}
       onMouseLeave={resumeAutoPlay}
     >

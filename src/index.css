@@ -80,6 +80,10 @@
   }
   body {
     @apply bg-background text-foreground font-crimson overflow-x-hidden;
+    background-image: url('/public/lovable-uploads/32878c48-fb79-4dc6-afcb-9ea9312e9f3c.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair;
@@ -100,7 +104,7 @@
   }
   
   .info-card {
-    @apply relative overflow-hidden rounded-lg bg-white/80 backdrop-blur-sm p-8 shadow-lg transition-all duration-300 hover:shadow-xl;
+    @apply relative overflow-hidden rounded-lg bg-white/90 backdrop-blur-sm p-8 shadow-lg transition-all duration-300 hover:shadow-xl;
   }
   
   .section-title {
@@ -159,6 +163,11 @@
   
   .slide-in {
     @apply opacity-0 translate-y-4 animate-slide-in-bottom;
+  }
+  
+  /* Added styles for content sections with the new background */
+  .content-section {
+    @apply bg-white/90 backdrop-blur-sm rounded-lg shadow-lg my-8;
   }
 }
 
