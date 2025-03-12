@@ -17,15 +17,33 @@ const slides = [
   },
   {
     id: 2,
-    image: 'public/lovable-uploads/b32850fb-9a42-4c8b-91da-39e00dc7667b.png',
-    title: 'Exceptional Dining Experience',
-    subtitle: 'Savor our delicious cuisine with panoramic ocean views',
+    image: 'public/lovable-uploads/aea6c119-7ab0-44ab-a775-c06306bca675.png',
+    title: 'Refreshing Tropical Drinks',
+    subtitle: 'Enjoy our selection of fresh fruit smoothies and specialty beverages',
   },
   {
     id: 3,
-    image: 'public/lovable-uploads/1f42cd91-847e-4d43-a10e-8dc70f5c4805.png',
-    title: 'Truly Authentic Flavors',
-    subtitle: 'Local ingredients prepared with international techniques',
+    image: 'public/lovable-uploads/c78077cc-2d6a-491d-987d-9a98159dfb64.png',
+    title: 'Crispy Fried Prawns',
+    subtitle: 'Delicious deep-fried prawns served with our signature dipping sauce',
+  },
+  {
+    id: 4,
+    image: 'public/lovable-uploads/86421bad-b8c7-4f2b-9704-a18b08469646.png',
+    title: 'Steamed Fish',
+    subtitle: 'Fresh locally-caught fish prepared with traditional Asian flavors',
+  },
+  {
+    id: 5,
+    image: 'public/lovable-uploads/aa7eef44-58a6-4e39-88e4-8bd1e5ea5f28.png',
+    title: 'Sizzling Hot Plate',
+    subtitle: 'Grilled chicken with fried rice, fried egg, and fresh vegetables',
+  },
+  {
+    id: 6,
+    image: 'public/lovable-uploads/3d7f1260-01d4-4e4f-9492-3001f55f164c.png',
+    title: 'Crispy Calamari Rings',
+    subtitle: 'Light and crispy calamari served with our house-made dipping sauce',
   },
 ];
 
@@ -43,7 +61,7 @@ const Index = () => {
         </div>
       </div>
       
-      {/* Restaurant Info Card (Similar to the reference) */}
+      {/* Restaurant Info Card */}
       <div className="bg-white/80 backdrop-blur-sm py-6">
         <div className="container mx-auto px-4">
           <RestaurantInfo />
