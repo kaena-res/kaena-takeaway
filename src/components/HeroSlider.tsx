@@ -106,12 +106,16 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
         >
           <div className="hero-overlay"></div>
           <div className="hero-content text-center px-4">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-              {slide.title}
-            </h2>
-            <p className="text-xl md:text-2xl max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
-              {slide.subtitle}
-            </p>
+            {index !== 0 && (
+              <>
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+                  {slide.title}
+                </h2>
+                <p className="text-xl md:text-2xl max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
+                  {slide.subtitle}
+                </p>
+              </>
+            )}
           </div>
         </div>
       ))}

@@ -8,8 +8,8 @@ interface AmenityItemProps {
 
 const AmenityItem = ({ icon, text }: AmenityItemProps) => {
   return (
-    <div className="amenity-item">
-      <div className="text-ocean-500">{icon}</div>
+    <div className="flex items-center gap-3 text-lg py-2">
+      <div className="text-ocean-600">{icon}</div>
       <span>{text}</span>
     </div>
   );
