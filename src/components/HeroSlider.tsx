@@ -27,7 +27,7 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
     
     setTimeout(() => {
       setIsAnimating(false);
-    }, 700); // Match this to the CSS transition duration
+    }, 700);
   };
 
   const prevSlide = () => {
@@ -38,7 +38,7 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
     
     setTimeout(() => {
       setIsAnimating(false);
-    }, 700); // Match this to the CSS transition duration
+    }, 700);
   };
 
   const goToSlide = (index: number) => {
@@ -49,7 +49,7 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
     
     setTimeout(() => {
       setIsAnimating(false);
-    }, 700); // Match this to the CSS transition duration
+    }, 700);
   };
 
   // Auto play functionality
@@ -86,7 +86,7 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
 
   return (
     <div 
-      className="relative w-full h-[85vh] overflow-hidden"
+      className="relative w-full h-[80vh] overflow-hidden"
       onMouseEnter={pauseAutoPlay}
       onMouseLeave={resumeAutoPlay}
     >
@@ -94,32 +94,38 @@ const HeroSlider = ({ slides, autoPlayInterval = 5000 }: HeroSliderProps) => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`hero-slide ${
-            index === currentSlide 
-              ? 'opacity-100 z-10' 
-              : 'opacity-0 z-0'
+          className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${
+            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
           style={{ 
             backgroundImage: `url(${slide.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            transition: 'opacity 700ms ease-in-out',
             transitionDelay: index === currentSlide ? '0ms' : '700ms'
           }}
         >
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-              {slide.title}
-            </h2>
-            <p className="text-xl md:text-2xl max-w-2xl animate-fade-in" style={{ animationDelay: '200ms' }}>
-              {slide.subtitle}
-            </p>
+          <div className="absolute inset-0 bg-black/25"></div>
+          
+          {/* Header with logo */}
+          <div className="absolute top-0 left-0 right-0 z-20 pt-20 pb-8 text-center">
+            <h1 className="text-6xl md:text-7xl font-bold text-white font-playfair drop-shadow-lg">Kaena</h1>
+            <p className="text-xl text-white mt-2">Restaurant, Takeaway & Bar</p>
           </div>
+          
+          {/* Slide content */}
+          {index !== 0 && (
+            <div className="absolute inset-0 flex items-center justify-center mt-16">
+              <div className="text-center px-4 z-20">
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-3 animate-fade-in drop-shadow-md">
+                  {slide.title}
+                </h2>
+                <p className="text-lg md:text-xl max-w-2xl mx-auto text-white animate-fade-in drop-shadow-sm" 
+                   style={{ animationDelay: '200ms' }}>
+                  {slide.subtitle}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       ))}
 

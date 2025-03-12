@@ -1,12 +1,11 @@
 
-import { Utensils, Coffee, Wine, Clock, Phone, MapPin, Globe, Instagram } from 'lucide-react';
+import { Utensils, Coffee, Wine, Clock, Phone, MapPin, Globe, Instagram, Facebook, Mail, Clock as TimeClock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSlider from '../components/HeroSlider';
-import InfoCard from '../components/InfoCard';
-import AmenityItem from '../components/AmenityItem';
 import RestaurantInfo from '../components/RestaurantInfo';
+import Map from '../components/Map';
 
 const slides = [
   {
@@ -55,107 +54,116 @@ const Index = () => {
       {/* Hero Section with Restaurant Identity */}
       <div className="relative">
         <HeroSlider slides={slides} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-30 w-full px-4">
-          <h1 className="text-7xl font-bold mb-4 text-white drop-shadow-lg font-playfair">Kaena</h1>
-          <h2 className="text-2xl text-white drop-shadow-md">Restaurant, Takeaway & Bar</h2>
-        </div>
       </div>
       
       {/* Restaurant Info Card */}
-      <div className="bg-white/80 backdrop-blur-sm py-6">
+      <div className="bg-white/80 backdrop-blur-sm py-6 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <RestaurantInfo />
         </div>
       </div>
       
       {/* Specialty Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-2 font-playfair">Specialising in Asian Cuisine</h2>
-              <p className="text-xl italic text-ocean-700">"Grilled & Sizzling Style"</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="flex items-center gap-3">
-                <Utensils className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">Seafood</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Wine className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">Bar</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Coffee className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">Takeaway</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">Lunch</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Utensils className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">Dinner</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Globe className="w-6 h-6 text-ocean-600" />
-                <span className="text-lg">International</span>
-              </div>
-            </div>
+      <section className="container mx-auto py-16 px-4">
+        <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 mb-12 shadow-sm">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-2 font-playfair">Specialising in Asian Cuisine</h2>
+            <p className="text-xl italic text-ocean-700 mt-2">"Grilled & Sizzling Style"</p>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-8 text-center font-playfair">Kaena Restaurant & Bar amenities</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <AmenityItem icon={<Utensils className="w-6 h-6" />} text="Seafood" />
-              <AmenityItem icon={<Wine className="w-6 h-6" />} text="Bar" />
-              <AmenityItem icon={<Coffee className="w-6 h-6" />} text="Takeaway" />
-              <AmenityItem icon={<Clock className="w-6 h-6" />} text="Lunch" />
-              <AmenityItem icon={<Utensils className="w-6 h-6" />} text="Dinner" />
-              <AmenityItem icon={<Globe className="w-6 h-6" />} text="International" />
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-center gap-3">
+              <Utensils className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Seafood</span>
             </div>
-            
-            <div className="mt-12 text-center">
-              <Link to="/menu" className="btn-primary inline-block">
-                View Full Menu
-              </Link>
+            <div className="flex items-center gap-3">
+              <Wine className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Bar</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Coffee className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Takeaway</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Lunch</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Utensils className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Dinner</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Globe className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">International</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <TimeClock className="w-6 h-6 text-ocean-600" />
+              <span className="text-lg">Cook Island</span>
             </div>
           </div>
         </div>
-      </section>
-      
-      {/* Contact Info Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-8 text-center font-playfair">Contact Us</h2>
+        
+        {/* Location Section */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm mb-12">
+          <h2 className="text-3xl font-bold py-6 text-center font-playfair">Kaena Restaurant & Bar location</h2>
+          <Map />
+          <div className="p-6">
+            <h3 className="text-2xl font-bold mb-4 font-playfair">Arorangi, Rarotonga</h3>
+            <p className="text-gray-700">
+              Located near the Rarotongan Beach Resort, our restaurant offers a perfect blend of local hospitality and international cuisine.
+            </p>
+          </div>
+        </div>
+        
+        {/* Contact Us Section */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-sm">
+          <h2 className="text-3xl font-bold py-6 text-center font-playfair">Contact Us</h2>
+          
+          <div className="p-6">
+            <h3 className="text-xl font-semibold mb-4 text-center">Booking / Enquiries</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Phone className="w-12 h-12 mx-auto text-ocean-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2 font-playfair">Phone</h3>
-                <p className="text-gray-600">+682 25433</p>
-                <a href="tel:+68225433" className="text-ocean-600 hover:text-ocean-800 mt-2 inline-block">Call Now</a>
+            <div className="max-w-xl mx-auto space-y-4">
+              <div className="flex items-center justify-center gap-2">
+                <Mail className="w-5 h-5 text-ocean-600" />
+                <span>Email: </span>
+                <a href="mailto:kaenarestaurant@gmail.com" className="text-ocean-600 hover:underline">
+                  kaenarestaurant@gmail.com
+                </a>
               </div>
               
-              <div className="text-center">
-                <MapPin className="w-12 h-12 mx-auto text-ocean-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2 font-playfair">Location</h3>
-                <p className="text-gray-600">Arorangi, Rarotonga, Cook Islands</p>
-                <Link to="/contact" className="text-ocean-600 hover:text-ocean-800 mt-2 inline-block">View Map</Link>
+              <div className="flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5 text-ocean-600" />
+                <span>Phone: </span>
+                <a href="tel:+68225433" className="text-ocean-600 hover:underline">
+                  +682-25433
+                </a>
               </div>
               
-              <div className="text-center">
-                <Instagram className="w-12 h-12 mx-auto text-ocean-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2 font-playfair">Social</h3>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-ocean-600 hover:text-ocean-800 mt-2 inline-block">Visit Instagram</a>
+              <div className="flex items-center justify-center gap-2">
+                <Facebook className="w-5 h-5 text-ocean-600" />
+                <span>Facebook: </span>
+                <a href="#" className="text-ocean-600 hover:underline">
+                  Kaena Restaurant & Takeaway
+                </a>
+              </div>
+              
+              <div className="flex items-center justify-center gap-2">
+                <Instagram className="w-5 h-5 text-ocean-600" />
+                <span>Instagram: </span>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-ocean-600 hover:underline">
+                  @kaenacookisland
+                </a>
+              </div>
+              
+              <div className="flex items-center justify-center gap-2">
+                <MapPin className="w-5 h-5 text-ocean-600" />
+                <span>Address: </span>
+                <span>Near Rarotongan Beach Resort, Arorangi, Rarotonga, Cook Islands</span>
               </div>
             </div>
             
-            <div className="text-center mt-12">
-              <Link to="/contact" className="btn-primary">
+            <div className="text-center mt-8">
+              <Link to="/contact" className="bg-ocean-500 hover:bg-ocean-600 text-white px-6 py-3 rounded-md transition-all duration-300">
                 Make a Reservation
               </Link>
             </div>
